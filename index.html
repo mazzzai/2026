@@ -13,6 +13,7 @@
 			background-color:#FFF;
 			margin:0;
 			height:100%;
+
 		}
 	</style>
 	<!-- copy these lines to your document head: -->
@@ -21,27 +22,37 @@
 
 	<!-- end copy -->
 
-<style>
+	  <style>
   html, body {
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    overflow-x: hidden !important; /* чтобы не было боковой прокрутки */
+    overflow-x: hidden !important;
   }
 
-  /* Это заставит контейнер Hype занять всю ширину */
+  /* Принудительно растягиваем главный контейнер Hype */
   #hny2026_hypere_container {
     width: 100vw !important;
-    height: auto !important; /* высота подстроится пропорционально */
+    height: auto !important;
+    min-width: 100% !important;
     margin: 0 auto !important;
+    /* Если картинка внутри не тянется, этот код заставит её заполнить экран */
+    transform-origin: top center;
   }
 
-  /* Если внутри есть сцена, растягиваем и её */
+  /* Растягиваем саму сцену внутри */
   .HYPE_scene {
     width: 100% !important;
+    left: 0 !important;
+  }
+  
+  img {
+    max-width: 100% !important;
+    height: auto !important;
   }
 </style>
+
 	  
   </head>
   <body>
